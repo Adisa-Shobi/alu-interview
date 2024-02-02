@@ -1,4 +1,10 @@
 #!/usr/bin/python3
+'''
+Solution to the rain problem
+Approach: Recursion
+Time complexity: O(n)
+Space complexity: O(n)
+'''
 
 def rain(walls):
     '''
