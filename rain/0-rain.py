@@ -6,6 +6,7 @@ Time complexity: O(n)
 Space complexity: O(n)
 '''
 
+
 def rain(walls):
     '''
     Given a list of non-negative integers representing walls of
@@ -50,7 +51,8 @@ def rain(walls):
 #     if pending:
 #         return calculate_units(
 #             walls,
-#             idx+1, units+(min([num for num in pending if num != 0]) * len(pending)),
+#             idx+1,
+# units+(min([num for num in pending if num != 0]) * len(pending)),
 #             pending=[]
 #         )
 #     return calculate_units(walls, idx+1, units)
