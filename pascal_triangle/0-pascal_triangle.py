@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Pascal triangle solution 
+Pascal triangle solution
 """
 
 
