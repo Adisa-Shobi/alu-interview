@@ -1,22 +1,23 @@
 #!/usr/bin/python3
-'''
-File defines pascal_triangle function
-'''
+"""
+Pascal triangle solution 
+"""
 
 
 def pascal_triangle(n):
-    '''
-    Function returns a list of lists of integers
-    representing the pascals triangle
-    '''
-    triangle = []
+    """
+    calculates the structure of a pascal triangle of height n:
+    """
+    result = []
     if n <= 0:
-        return(triangle)
-    for line in range(1, n + 1):
-        sub_triangle = []
-        prev = 1
-        for index in range(1, line + 1):
-            sub_triangle.append(int(prev))
-            prev = prev * (line - index)/index
-        triangle.append(sub_triangle)
-    return(triangle)
+        return result
+
+    last = [1]
+    for i in range(1, n + 1):
+        actual = [1] * i
+        actual = [last[index - 1] + last[index] if index > 0 and
+                  index < len(actual) - 1 else 1 for index,
+                  value in enumerate(actual)]
+        last = actual
+        result.append(actual)
+    return result
